@@ -1,0 +1,490 @@
+/* ========== At first, set Defaults back to zero ========== */
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,table,tr,td,thead,tbody{
+	margin:0px;
+	padding:0px;
+	font-weight:normal;
+	border:0px;
+}
+
+ul, ol, dd{
+	padding-left:2em;
+}
+
+
+
+
+
+/* set the basics 100e2r */
+
+html, body {
+	font:100%/1.45 Georgia, serif;	
+	line-height: 145%;		
+}
+
+html{
+	background:url(http://anmutunddemut.de/sites/default/themes/takeshi/black.png) repeat-x;
+}
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+
+td{
+	padding-left:5px;
+}
+
+
+
+
+
+/* correction of some of drupals defaults */
+
+.item-list .pager{
+	font-size:110%;	
+	margin:4em;
+}
+
+.item-list ul.pager li {
+	margin:0;
+	padding:0.3em;
+}
+
+.feed-icon{
+	display:none;	
+}
+
+
+
+
+
+/* take care of layout */
+
+#arena {
+	margin-top:1px;
+	margin-left:20px;
+	margin-right:20px;
+	padding-top:40px;
+	
+}
+
+#footer {	
+	margin:25px;	
+	border-top:3px solid black;
+	width:1150px;
+	margin-bottom:3em;
+}
+
+
+
+
+
+
+/* header */
+
+#header {
+	padding:5px;
+	padding-top:5px;	
+	padding-left:20px;
+	height:20px;
+	color:white;
+}
+
+#header a{
+	color:white;	
+}
+
+#header h1, 
+#header h2,
+#header p{
+	display:inline;
+	font-size:16px;
+}
+
+#header h2{
+	position:relative;
+	left:50px;
+}
+
+#header p{
+  position:absolute;
+  right:20px;
+
+}
+
+.backandforth{
+  position:relative;
+  right:40px;
+}
+
+
+
+
+
+/* nodes */
+
+.node {
+	clear:both;
+	width:730px;
+	margin-bottom:2em;	
+}
+
+#arena h2.title{
+	margin-bottom:0.5em;
+	margin-left:180px;
+}
+
+.page-node #arena h2.title{
+  margin-bottom:2em;
+}
+
+#arena .metadata{
+	position:absolute;
+}
+.teaser{
+	min-height:6em;
+	
+}
+.with-teaserimage {
+	min-height:275px;
+}
+
+.node .content{
+	margin-left:180px;	
+}
+
+.node 	.content p,
+.comment .content p,
+.node .content ul,
+.node .content ol,
+.node .content dl,
+.node .content table,
+.node pre{
+	margin-bottom:2em;	
+}
+
+.full .tabs {
+	display:none;
+}
+
+.page-node .with-teaserimage {
+	min-height:350px;
+}
+
+
+
+
+
+
+/* inline elements */
+
+.node .content blockquote {
+	border-left:3px solid black;
+	padding-left:2em;
+}
+
+.node .content img {
+	max-height:550px;
+	max-width:550px;	
+}
+
+.node h3{
+	margin-bottom:1em;
+}
+
+
+
+
+
+
+
+
+
+/* homepage */
+.teaser .teaserimage {	
+	position:absolute;
+	left:770px;
+}
+
+.teaser .teaserimage img {
+	width:200px;
+	
+}
+
+.full .teaserimage  {	
+	position:absolute;
+	left:820px;
+	top:34px;
+}
+
+.full .teaserimage img {
+	width:350px;
+}
+
+.readmore{
+	margin-top:-1em;
+	text-align:right;
+}
+
+hr{
+  border:0;
+  height:3px;
+  color:black;
+  background:black;
+}
+
+
+
+/* footnotes */
+#footnotes {
+	position:relative;
+	border-top:3px solid black;
+	width:1150px;
+	padding-top:1em;
+	margin-bottom:2em;
+}	
+
+#mytabs li{
+	display:inline;
+}
+
+
+
+
+
+/* kommentare */
+
+#comments {
+	margin-left:180px;
+	width:970px;
+	padding-top:5px;
+}
+
+h2.comments {
+	border-top:3px solid black;
+	padding-top:1em;
+	margin-bottom:2em;
+	margin-left:-180px;
+
+}
+
+.comment {
+	margin-bottom:3em;	
+	width:550px;
+	
+}
+
+.comment .metadata{
+	margin-left:580px;
+	
+}
+
+.comment hr{
+	border:0;
+	height:1px;
+	color:black;
+	background:black;
+	width:840px;	
+}
+
+#comments .box h2{
+	margin-left:-180px;
+}
+
+.comment .submitted{
+	text-align:right;
+	font-style:italic;
+	margin-top:-2em;
+}
+
+#comment-form {
+	width:550px;
+	
+}
+
+
+
+
+
+/* several blocks */
+
+#block-views-teasermosaic-block_1 {
+	width:1150px;
+	padding-top:25px;   	
+	display:block;
+	border-bottom:3px solid black;
+	margin-bottom:2em;
+}
+
+#block-views-teasermosaic-block_1 h3.title{
+	display:none;
+}
+
+#block-views-teasermosaic-block_1 ul {
+	padding:0;
+}
+#block-views-teasermosaic-block_1 ul li {
+	display:inline;
+	width:160px;
+	margin:0 0 1em 23px;
+	position:relative;
+	height:163px;
+	overflow:hidden;
+	line-height:58px;
+}
+
+#block-views-teasermosaic-block_1 ul h3 {
+	display:inline;
+}
+
+#block-views-teasermosaic-block_1 img,
+.block-teaserimage h3 {
+	padding:0; width:161px;
+}
+
+#block-views-teasermosaic-block_1 img {
+	padding:0;
+	width:161px;
+	height:161px;
+	border:1px solid #bbb;
+}
+
+#block-views-teasermosaic-block_1 span {
+	display:none;
+	font-size:14px;
+	position:absolute;
+	left:0; bottom:0;
+	background:#000;
+	opacity:.75;
+	padding:5px;
+	width:153px;
+	border-top:1px solid #fff;
+	letter-spacing:.5px;
+}
+
+#block-block-5 {
+  text-align:right;
+  padding-right:35px;
+  border-bottom:3px solid black;
+  margin-top:28px;
+  padding-bottom:28px;
+}
+
+#block-block-5 h3{
+ display:none; 
+}
+
+
+
+
+/* admin stuff */
+
+fieldset{
+	border:1px solid gray;
+	padding:10px;
+	margin-bottom:2em;
+}
+
+
+.nodecreationform #node-form {
+	width:800px;	
+}
+
+.nodecreationform #node-form #edit-title{
+	font-size:150%;	
+}
+
+.nodecreationform #node-form .thebuttons input{
+	font-size:85%;
+}
+
+/* Admin Bocky*/
+
+.page-admin #pre .block{
+  float:left;
+  margin-right:2em;
+  margin-bottom:2em;
+}
+
+.page-admin #content {
+  clear:both;
+  margin-top:2em;
+  
+}
+
+
+/* anmut und demut */
+
+.volleBreitseite, .moblog-full{
+	margin-left:-180px;
+	margin-top:-13px;
+}
+
+.node .content .volleBreitseite img,
+.moblog-full .content img {
+	max-width:1150px;
+	max-height:650px;
+}
+
+.node .content .marginalie{
+	margin-left:-180px;
+	float:left;
+	clear:left;
+	width:160px;
+}
+
+.node .content .marginalie img{
+	max-width:160px;
+}
+
+.node .content .glosse{
+	position:absolute;
+	left:800px;
+}
+
+.node .content .glosse img{
+	max-width:350px;
+}
+
+.moblog-teaser .content img{
+	max-height:250px;
+	max-width:250px;
+}
+
+#themessages{
+	position:absolute;
+	top:100px;
+	left:170px;
+	border:1px solid black;
+	
+	padding:10px;
+	background-color:white;
+	z-index:10;
+}
+
+.hideme {
+	text-align:right;	
+}
+
+.hideme a{
+	color:gray;
+}
+
+
+
+
+/* semantic weblog styles */
+
+.taxonomy-term-description{
+  width:550px;
+  margin-left:180px;
+  margin-bottom:4em;
+}
+
+.taxonomy-term-content-title{
+  margin-bottom:2em;
+}
