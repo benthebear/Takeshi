@@ -31,8 +31,8 @@
 		</p>
 	<?php }; ?>   
     <div class="content">
-      <?if($node->field_teaserimage[0]["value"]!=""){
-        print "<p class='teaserimage'><img src='".$node->field_teaserimage[0]["value"]."'/></p>";
+      <?if(($node->field_teaserimage[0]["value"]!="" and $page==0) or ($node->field_teaserimage[0]["value"]!="" and $node->field_hideimage[0]["value"]!="1" and $page==1)){
+        print "<p class='teaserimage'><img src='".$node->field_teaserimage[0]["value"]."' alt='".thememe_cleanxml($title)."'/></p>";
       }?>
    		<?=$content?> 	
 	 	  <?if($readmore and $teaser){
@@ -42,6 +42,9 @@
 </div>
 
 <? if($page){?>
+
+<hr/>  
+  
 <div id="footnotes">
   
   <!-- Datum, Nodetype, Klicks, Navi -->
@@ -49,7 +52,9 @@
 	<div id="firstline">		
 		~ <?=t($node->type)?> vom <?=date("j. n. Y", $node->created)?> &nbsp;  – 
 		
-		<?php if ($links) { ?><?php print $links?><?php }; ?>
+		<?php if ($links) { print $links; }; ?>
+		
+		<?="– ". strlen(strip_tags($content))." Zeichen "?>
 		
 		<?
 		$backandforth = backandforth_data($node->created);
@@ -90,6 +95,13 @@
 		if (count($myterms["3"])!=0){
 			$vocab["series"] = "Serie: ".implode ($myterms["3"], ", ");
 		}
+		if (count($myterms["15"])!=0){
+			$vocab["project"] = "Typ: ".implode ($myterms["15"], ", ");
+		}
+		if (count($myterms["14"])!=0){
+			$vocab["project"] = "Projekt: ".implode ($myterms["14"], ", ");
+		}
+		
 		if (count($myterms["1"])!=0){
 			$vocab["lexicon"] = "Lexikon: ".implode ($myterms["1"], ", ");
 		}

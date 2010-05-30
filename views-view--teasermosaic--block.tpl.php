@@ -20,12 +20,15 @@
  * @ingroup views_templates
  */
 ?>
+
+
 <ul>
  
   <?php
   foreach($view->result as $ti){
     print "<li>";
-    print l("<img src='".$ti->node_data_field_teaserimage_field_teaserimage_value."' width='161px'/>", "node/".$ti->nid, array('html'=>'TRUE'));    
+    //print_r($ti);
+    print l("<img src='".$ti->node_data_field_teaserimage_field_teaserimage_value."' width='161' alt='".thememe_cleanxml($ti->node_title)."'/>", "node/".$ti->nid, array('html'=>'TRUE', 'attributes'=>array('title'=>$ti->node_title)));    
     print "</li>";
   }   
   ?>
