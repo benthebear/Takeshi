@@ -8,13 +8,14 @@
 	
 ?>
 <!doctype html>
-<head>
-    <title><?php print $head_title ?></title>
-  	<?php print $head ?>
-  	<?php print $styles ?>
-  	<?php print $scripts ?>
+<html>
+<head>    
+  <title><?php print $head_title ?></title>
+  <?php print $head ?>
+  <?php print $styles ?>
+  <?php print $scripts ?>
 	<script type="text/javascript" src="/sites/default/themes/takeshi/functions.js"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
-    <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
+  <script type="text/javascript"><?php /* Needed to avoid Flash of Unstyle Content in IE */ ?> </script>
 </head>
 <body  class="<?=$classstring?>">
 	<?
@@ -39,12 +40,14 @@
 		
 			<?
 			// Admin Only Menu
+			if(user_access("search content")){?>
+			&nbsp; <a href="http://anmutunddemut.de/search">suche</a>
+			<?}
 			if($is_admin){?>						
-			&nbsp; <a href="http://anmutunddemut.de/search">suche</a>			
 			&nbsp; <a href="http://anmutunddemut.de/admin">admin</a>
 			<?}?>
 
-		</p>
+		</p> 
     </div>
 		
 		
@@ -63,6 +66,7 @@
         <?php if($pre){?>
     	<div id="pre" class="region">
     		<?php print $pre ?>
+    		<hr class="clear hideme"/>
     	</div>
     	<?php }?>
     	
@@ -84,16 +88,19 @@
       </div>
       
       <?php if($post){?>      
-    	<div id="pre" class="region">
+    	<div id="post" class="region">
     		<?php print $post ?>
     	</div> 
     	<?php }?>
     	
     </div>  
     
+   
+    
     <div id="footer" class="region">
   		<?php print $footer_message ?>
   		<?php print $footer ?>
-	</div>
+	  </div>
     
 </body>
+</html>

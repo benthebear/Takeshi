@@ -31,7 +31,11 @@
  * @see theme_comment_wrapper()
  */
 ?>
+
+
+
 <div id="comments">
+  <hr />
 	<?php if($node->comment_count!=0){ ?><h2>Kommentare</h2><?php }?>
   	<?php print $content; ?> 
 </div>

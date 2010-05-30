@@ -16,7 +16,7 @@ ul, ol, dd{
 
 /* set the basics 100e2r */
 
-html, body {
+html, body, textarea {
 	font:100%/1.45 Georgia, serif;	
 	line-height: 145%;		
 }
@@ -68,15 +68,34 @@ td{
 	margin-top:1px;
 	margin-left:20px;
 	margin-right:20px;
-	padding-top:40px;
-	
+	padding-top:40px;	
+}
+
+#pre {
+  
+}
+
+#post {
+  padding-top:10px;  
 }
 
 #footer {	
-	margin:25px;	
-	border-top:3px solid black;
+  clear:both;
+	margin:20px;		
 	width:1150px;
 	margin-bottom:3em;
+}
+
+.clear {
+  clear:both;
+}
+
+
+/* Some basic pages */
+
+.page-admin #arena{
+  width:1150px;
+  font-size:80%;
 }
 
 
@@ -145,17 +164,7 @@ td{
 #arena .metadata{
 	position:absolute;
 }
-.teaser{
-	min-height:6em;
-	
-}
-.with-teaserimage {
-	min-height:275px;
-}
 
-.node .content{
-	margin-left:180px;	
-}
 
 .node 	.content p,
 .comment .content p,
@@ -180,9 +189,87 @@ td{
 
 
 
+/* Regular Teasers  */
+
+.teaser{
+	min-height:6em;	
+}
+
+.with-teaserimage {
+	min-height:275px;
+}
+
+.node .content{
+	margin-left:180px;	
+}
+
+
+
+
+/* Archive and Taxonomy */
+
+.page-term .teaser,
+.page-archive .teaser{
+ border-bottom:3px solid black;	
+ margin-left:50px;
+}
+
+.page-term .node,
+.page-archive .node{
+ width:1050px;
+}
+
+.page-term .with-teaserimage,
+.page-archive .with-teaserimage {
+	min-height:80px;
+}
+
+.page-term .teaser .date,
+.page-archive .teaser .date{
+	width:200px;
+}
+
+.page-term  .teaser  img,
+.page-archive  .teaser  img{
+	width:70px;	
+	position:absolute;
+	left:160px;
+}
+
+
+.page-term .teaser .title,
+.page-archive .teaser .title{
+	position:absolute;
+	left:250px;
+	font-size:150%;
+	line-height:160%;
+	width:685px;
+	overflow:hidden;
+}
+
+.page-term .teaser .commentcount,
+.page-archive .teaser .commentcount{
+	position:absolute;
+	left:950px;
+}
+
+
+.page-archive #content h3{
+	display:none;
+}
+
+#archive-container {
+	width:1050px;
+	margin:0 0 100px 50px;
+}
+
+
+
+
+
 /* inline elements */
 
-.node .content blockquote {
+.content blockquote {
 	border-left:3px solid black;
 	padding-left:2em;
 }
@@ -207,12 +294,12 @@ td{
 /* homepage */
 .teaser .teaserimage {	
 	position:absolute;
-	left:770px;
+	left:787px;
 }
 
 .teaser .teaserimage img {
-	width:200px;
-	
+	width:161px;
+	border:1px solid lightgrey;
 }
 
 .full .teaserimage  {	
@@ -235,14 +322,27 @@ hr{
   height:3px;
   color:black;
   background:black;
+  width:1150px;
+  text-align:left;
+  margin-top:2em;
+  margin-left:20px;
+}
+
+#arena hr, #footer hr{
+  margin-left:0px;
+  margin-top:2em;
+  margin-bottom:2em;  
+}
+
+#arena .node hr{ 
+  margin-left:-180px;
 }
 
 
 
 /* footnotes */
 #footnotes {
-	position:relative;
-	border-top:3px solid black;
+	position:relative;	
 	width:1150px;
 	padding-top:1em;
 	margin-bottom:2em;
@@ -264,8 +364,7 @@ hr{
 	padding-top:5px;
 }
 
-h2.comments {
-	border-top:3px solid black;
+h2.comments {	
 	padding-top:1em;
 	margin-bottom:2em;
 	margin-left:-180px;
@@ -312,12 +411,28 @@ h2.comments {
 
 /* several blocks */
 
+.block hr {
+  display:none;
+}
+
+#footer .block hr {
+  display:block;
+  clear:both;
+}
+
+#footer .block-menu ul.menu li.last{
+  margin-bottom:2em;
+}
+
+#footer .block-menu ul.menu li{
+  float:left;   
+  margin:0 0 0 0.8em;  
+}
+
 #block-views-teasermosaic-block_1 {
 	width:1150px;
-	padding-top:25px;   	
-	display:block;
-	border-bottom:3px solid black;
-	margin-bottom:2em;
+
+	display:block;	
 }
 
 #block-views-teasermosaic-block_1 h3.title{
@@ -368,20 +483,52 @@ h2.comments {
 
 #block-block-5 {
   text-align:right;
-  padding-right:35px;
-  border-bottom:3px solid black;
-  margin-top:28px;
-  padding-bottom:28px;
+  padding-right:35px;  
+ 
 }
 
 #block-block-5 h3{
  display:none; 
 }
 
+#block-block-5 img{
+  margin-left:50px;
+  margin-right:25px;
+  width:111px;
+}
+
+#block-block-8 table {
+	width:100%;
+	border-collapse:separate;
+	border-spacing:20px;
+}
+
+#block-block-8 td {
+	width:200px;
+	
+}
+
+
+#block-block-9 {
+ padding:10px;
+ border:1px solid gainsboro;
+	background:#fff no-repeat 50% 0; 
+		 -moz-box-shadow:7px 7px 25px gainsboro; 
+ 	-webkit-box-shadow:7px 7px 25px gainsboro; 
+					
+ width:1130px;
+ margin-bottom:4em;
+}
+
+.page-homepage #pre hr{
+	display:none;
+}
 
 
 
-/* admin stuff */
+
+
+/* Admin stuff */
 
 fieldset{
 	border:1px solid gray;
@@ -402,9 +549,13 @@ fieldset{
 	font-size:85%;
 }
 
-/* Admin Bocky*/
 
-.page-admin #pre .block{
+
+
+/* Admin Blocky*/
+
+.page-admin #pre .block,
+.page-admin #post .block{
   float:left;
   margin-right:2em;
   margin-bottom:2em;
@@ -412,8 +563,7 @@ fieldset{
 
 .page-admin #content {
   clear:both;
-  margin-top:2em;
-  
+  margin-top:2em;  
 }
 
 
@@ -443,7 +593,7 @@ fieldset{
 
 .node .content .glosse{
 	position:absolute;
-	left:800px;
+	left:820px;
 }
 
 .node .content .glosse img{
@@ -454,6 +604,8 @@ fieldset{
 	max-height:250px;
 	max-width:250px;
 }
+
+
 
 #themessages{
 	position:absolute;
@@ -474,6 +626,27 @@ fieldset{
 	color:gray;
 }
 
+
+.gedankenpause {
+  margin-top:4em !important
+}
+
+.page-node .halbeSpalte{
+  width:45%;
+}
+
+.page-node .linkeSpalte{ 
+  clear:both;
+  float:left;
+}
+
+.page-node .rechteSpalte{
+  float:right;
+}
+
+.page-node h3{ 
+  clear:both;
+}
 
 
 
